@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso HTML5-CSS3</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="currentPage()">
+    <div class="container shadow">
+        <header>
+            <div class="row align-items-center">
+                <div class="col-3"><img src="img/logoiesfseif.png" alt="logo" width="250"></div>
+                <div class="col-9">
+                    <span id="btnmenu" onclick="opendrawer()">&#9776;</span>
+                    <nav id="menu">
+                        <ul class="text-right">
+                            <li>
+                                <a href="index.html">
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <a href="parrafos.html">
+                                    Párrafos
+                                </a>
+                            </li>
+                            <li>
+                                <a href="enlaces.html">
+                                    Enlaces
+                                </a>
+                            </li>
+                            <li>
+                                <a href="listas.html">
+                                    Listas
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tablas.html">
+                                    Tablas
+                                </a>
+                            </li>
+                            <li>
+                                <a href="formularios.html">
+                                    Formularios
+                                </a>
+                            </li>
+                            <li>
+                                <a href="multimedia.html">
+                                    Multimedia
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+
+        </header>
+        <main>
+            <div class="px-3">
+                <h1 class="text-center bg-azul-o text-white py-3 my-5 rounded-2 borderDraw">HTML5 & CSS3</h1>
+            </div>
+            <div class="px-3">
+                <hr>
+            </div>
+            <div id="parrafos" class="py-3">
+                <h2 class="text-center textTitle">PÁRRAFOS</h2>
+            </div>
+            <div class="px-3">
+                <hr class="mb-0">
+            </div>
+            <div class="p-3">
+                <p>Esto es un parrafo con la etiqueta p.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, provident impedit molestiae fuga expedita sint quas nisi. Unde recusandae natus nostrum temporibus molestias! Mollitia laborum aspernatur quos vero illo dicta.</p>
+                <p>Por cada parrafo hay un line en blanco de separacion, para evitarlo se utiliza la etiqueta br.<br>
+                Funcionara como un punto y aparte.</p>
+                <p>Para realizar encabezados se utilizan las etiquetas h1 a la h6 dependiendo del tamaño deseado.</p>
+                
+                <h1>Encabezado de la etiqueta h1</h1>
+                <h2>Encabezado de la etiqueta h2</h2>
+                <h3>Encabezado de la etiqueta h3</h3>
+                <h4>Encabezado de la etiqueta h4</h4>
+                <h5>Encabezado de la etiqueta h5</h5>
+                <h6>Encabezado de la etiqueta h6</h6>
+
+                <p>Para cambiar el texto en negrita se utiliza la etiqueta <strong>strong</strong>.</p>
+                <p>Para poner el texto en cursiva se utilila la etiqueta <em>em</em>.</p>
+                <p>Para insertar subindices se usa la etiqueta <sub>sub</sub> y para introducir superindices se hace con la etiqueta <sup>sup</sup>.</p>
+                <p>Para cambiar el formato de una seccion del texto y no producir un salto de linea se usara la etiqueta <span class="font-size-1 text-yellow bg-purple">span</span>.</p>
+
+                <p>Voy a añadir dos etiquetas div para demostrar el espacio que ocupan (display block):</p>
+                <div class="Caja1">Caja1</div>
+                <div class="Caja2">Caja2</div>
+            
+            </div>
+            <div class="px-3">
+                <hr class="mb-0">
+            </div>
+        </main>
+        <footer>
+            <h2 class="text-center text-white py-3">&copy; Developed By: <span class="subrayado font-size-lower">Aitor Gonzalez Barrera </span> </h2>
+        </footer>
+    </div>
+    <script>
+        function opendrawer() {
+            document.getElementById('menu').style.display = 'block';
+            document.getElementById('menu').style.witdh = '100%';
+        }
+
+        function currentPage() {
+            var elementos = document.getElementsByTagName("a")
+
+            var titulo = document.getElementsByClassName("textTitle")[0].innerText + " ";
+            titulo = titulo.slice(0,1) + titulo.slice(1).toLowerCase();
+            console.log(titulo);
+
+            for (let a = 0; a < elementos.length; a++){
+                console.log(titulo, elementos[a].innerText)
+
+                if (titulo == elementos[a].innerText) {;
+                    elementos[a].className = elementos[a].className + " bg-azul-c";
+                    elementos[a].className = elementos[a].className + " rounded-1";
+                    elementos[a].className = elementos[a].className + " p-2";
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>

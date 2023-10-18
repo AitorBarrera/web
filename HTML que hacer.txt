@@ -1,0 +1,8 @@
+Mejorar los h1.
+Arreglar y Mejorar la barra de navegacion. (cambiar tamaño del texto)...  
+Mejorar los bordes y sombras
+
+
+ul>li*4 
+dl>(dt+dd)*3
+
