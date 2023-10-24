@@ -168,11 +168,11 @@ main a{
 }
 
 .shadow {
-    box-shadow: 0 0 20px rgb(3, 3, 155);
+    box-shadow: 0 0 20px rgb(3, 3, 87);
 }
 
 .shadow-white {
-    box-shadow: 0 0 18px rgba(78, 17, 136, 0.575);
+    box-shadow: 0 0 18px rgba(146, 138, 218, 0.575);
 }
 
 header{
