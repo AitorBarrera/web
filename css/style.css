@@ -527,6 +527,7 @@ label{
 }
 
 .enlaces img{
+    margin: 20px 0 0 0;
     padding: 6px;
-    border: 4px solid rgb(0, 1, 17);
+    border: 2px solid rgb(0, 172, 109);
 }
